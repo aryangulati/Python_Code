@@ -10,6 +10,10 @@
 # 5. map the predicted id to name of the user 
 # 6. Display the predictions on the screen - bounding box and name
 
+#its easy way to do face recognition and not effective 
+#we can to do by Cnn (deep learning)
+
+
 
 
 import os
@@ -27,17 +31,19 @@ for fx in os.listdir(dataset_path):
     if fx.endswith(".npy"):
         l = fx.split(".")[0]
         
-        face_item = np.load(dataset_path + fx)
+        face_item = np.load(dataset_path + fx)#Load arrays or pickled objects from ``.npy``, ``.npz`` or pickled files.
+        #Dataset path + file name of npy we are giving above
         # print(face_item.shape)
         print("loaded " , l) #so it can tell which all have loaded
         
         face_data.append(face_item)
         # appending labels #times => faces
-        for i in range(face_item.shape[0]):
+        for i in range(face_item.shape[0]): #we are appending labels no of time faces are appended
             labels.append(l)
 
 
-X = np.concatenate(face_data, axis =0)
+X = np.concatenate(face_data, axis =0)  #we are concatenate data so we can input in kNN 
+#here we are adding both the images in np array
 Y = np.array(labels)
 
 print(X.shape)
@@ -82,7 +88,7 @@ def kNN(X, y, x_query, k = 5):
 # TEST FACE RECOG
 
 
-cam = cv2.VideoCapture(0)
+cam = cv2.VideoCapture(0) #this is for video capturing
 
 face_cascade = cv2.CascadeClassifier("haarcascade_frontalface_alt.xml")
 
