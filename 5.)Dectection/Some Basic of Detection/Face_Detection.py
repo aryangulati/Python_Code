@@ -26,10 +26,10 @@ while True:
         #  Frame, Start, End, Color,Thickness
         
         face_only=frame[y:y+h,x:x+w]
-        cv2.imshow("Face Selection", face_only)
+        cv2.imshow("Face Selection", face_only)q
         
     cv2.imshow("Feed", frame)
-    key = cv2.waitKey(1)
+    key = cv2.waitKey(1)q
     if key==ord("q"):
         break
 cam.release()
