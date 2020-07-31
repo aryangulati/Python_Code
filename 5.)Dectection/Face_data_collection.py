@@ -5,6 +5,7 @@ import numpy as np
 cam = cv2.VideoCapture(0)
 
 face_cascade = cv2.CascadeClassifier("haarcascade_frontalface_alt.xml")
+#we can also add other classifier in it
 
 face_data = []
 
