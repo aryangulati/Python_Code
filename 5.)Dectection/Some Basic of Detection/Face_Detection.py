@@ -4,7 +4,7 @@ cam=cv2.VideoCapture(0)
 
 #intialising Cascade Classifier with fileName
 face_cascade = cv2.CascadeClassifier("haarcascade_frontalface_alt.xml") 
-#see where your file is ??
+#see where your file is ?? see ternminal u are running ur python code
 
 while True:
     ret, frame = cam.read() #Status-->True/False #Frame
@@ -26,10 +26,10 @@ while True:
         #  Frame, Start, End, Color,Thickness
         
         face_only=frame[y:y+h,x:x+w]
-        cv2.imshow("Face Selection", face_only)q
+        cv2.imshow("Face Selection", face_only)
         
     cv2.imshow("Feed", frame)
-    key = cv2.waitKey(1)q
+    key = cv2.waitKey(1)
     if key==ord("q"):
         break
 cam.release()
