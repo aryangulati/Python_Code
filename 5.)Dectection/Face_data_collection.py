@@ -22,6 +22,8 @@ while True:
     faces = face_cascade.detectMultiScale(gray_frame, 1.3, 5)
     
     #face_section =None
+
+    
     
     for face in faces:
         x, y, w, h = face
