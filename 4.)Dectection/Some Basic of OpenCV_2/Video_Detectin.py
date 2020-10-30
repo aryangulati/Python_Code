@@ -10,6 +10,8 @@ while True:
 	ret, frame = cam.read()
 	if ret == True:
 		gray_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY) # bgr -> grayscale conversion
+		#scaleFactor Parameter specifying how much the image size is reduced at each image scale.
+		#minNeighbors Parameter specifying how many neighbors each candidate rectangle should have
 		faces = model.detectMultiScale(gray_frame, 1.3, 5)
 		smiles=smile.detectMultiScale(gray_frame,1.3,25)
         #detectMultiScale(gray_frame, 1.3, 0) it has 2 parameter 
