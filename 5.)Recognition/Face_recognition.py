@@ -13,9 +13,6 @@
 #its easy way to do face recognition and not effective 
 #we can to do by Cnn (deep learning)
 
-
-
-
 import os
 import numpy as np
 import cv2
