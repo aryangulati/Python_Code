@@ -8,7 +8,7 @@ face_cascade = cv2.CascadeClassifier("haarcascade_frontalface_alt.xml")
 skip = 0
 face_data = []
 #store data in array of img in data folder 
-dataset_path = './data/' 
+dataset_path = './data1/' 
 
 file_name=input("Enter the name of the person :")
 
